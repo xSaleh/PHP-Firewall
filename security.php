@@ -13,8 +13,6 @@
 
 
 
-
-
 /*=================Config=================*/
 error_reporting(0);
 define('REQUEST_URI', $_SERVER['REQUEST_URI']);
@@ -131,7 +129,7 @@ if (PHP_FIREWALL_STATUS === true):
         $_SESSION = clean($_SESSION);
     }
 
-    /* List of sql queries types */
+    /* List of queries */
     $sql = array("'","from","where","concat","union","select","order","/**/","/*","*/","/*!","/*--*/","information_schema","table_schema","or 1=1","'1'='1","char","sleep(","%27");
     $xss = array("prompt(","<img","onclick","script","alert","document.cookies","javascript:","document.location");
     $php_commad = array("/etc/passwd","system","exec","exec_shell","file_put_contents","fopen","eval","fwrite","phpinfo","curl","wget");
