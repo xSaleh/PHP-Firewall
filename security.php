@@ -94,7 +94,7 @@ if (PHP_FIREWALL_STATUS === true):
 /*=================Check Protections=================*/
 
     /* Methods protection */
-    if (preg_match('/^(HEAD|TRACE|TRACK|DEBUG|OPTIONS|PUT)/i', REQUEST_METHOD)) {
+    if (preg_match('/^(HEAD|TRACE|TRACK|DEBUG|OPTIONS|PUT|DELETE)/i', REQUEST_METHOD)) {
         PHP_LOGS("Method Protection: ".REQUEST_METHOD);
         die("This method is not supported !");
     }
